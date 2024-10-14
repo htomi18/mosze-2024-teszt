@@ -1,26 +1,29 @@
 #include <iostream>
 
 constexpr int N_ELEMENTS = 100;
+using namespace std;  //ez amiatt, hogy ne kelljen minden sorba kiírni, hogy 'std::'
 
 int main()
 {
-    int *b = new int[NELEMENTS];
-    std::cout << '1-100 ertekek duplazasa'
-    for (int i = 0;)
+    int *b = new int[N_ELEMENTS];  //NELEMENTS helyett N_ELEMENTS
+    cout << '1-100 ertekek duplazasa'; //'std::' törölve, sor végén ';' kirakva
+    for (int i = 0;i <= N_ELEMENTS; i++)  //for ciklus hiányos, hiányzik hogy meddig menjen, hanyas lépésközzel
     {
         b[i] = i * 2;
     }
-    for (int i = 0; i; i++)
+    for (int i = 0; i<= N_ELEMENTS; i++) //<=N_ELEMENTS hiányzott
     {
-        std::cout << "Ertek:"
+        cout << "Ertek: " << b[i] << endl;  //az értéket nem írja ki az 'Ertek: ' után, sor végén ';' hiányzott, 'std::' törölve
     }    
-    std::cout << "Atlag szamitasa: " << std::endl;
+    cout << "Atlag szamitasa: " << endl;  //'std::' törölve
+    
     int atlag;
-    for (int i = 0; i < N_ELEMENTS, i++)
+
+    for (int i = 0; i <= N_ELEMENTS#### i++)  // a for ciklusban nem megfelelő az elválasztó karakter
     {
-        atlag += b[i]
+        atlag += b[i];  //hiányzik a sor végi ';' záró karakter
     }
     atlag /= N_ELEMENTS;
-    std::cout << "Atlag: " << atlag << std::endl;
+    cout << "Atlag: " << atlag << endl;  //'std::' törölve
     return 0;
 }
