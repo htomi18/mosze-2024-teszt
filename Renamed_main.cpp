@@ -19,7 +19,7 @@ int main()
     
     int atlag;
 
-    for (int i = 0; i <= N_ELEMENTS#### i++)  // a for ciklusban nem megfelelő az elválasztó karakter
+    for (int i = 0; i <= N_ELEMENTS; i++)  // a for ciklusban nem megfelelő az elválasztó karakter
     {
         atlag += b[i];  //hiányzik a sor végi ';' záró karakter
     }
